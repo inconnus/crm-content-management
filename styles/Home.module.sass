@@ -1,19 +1,135 @@
+.header
+    width: 100%
+    height: 55px
+    background: #FFF
+    box-shadow: 0 0 2px 1px #22222213
+    z-index: 1
+    flex-shrink: 0
 .page
     width: 100vw
     height: 100vh
+    flex-direction: column
+    .container
+        width: 100%
+        height: 100%
+        flex-grow: 0
+        overflow: hidden
+        
+    .content_container
+        width: 100%
+        height: 100%
+        padding: 20px
+        flex-direction: column
+        box-sizing: border-box
+        
+        .title
+            font-size: 1.8em
+            color: #555
+            margin-bottom: 10px
+        .content
+            width: 100%
+            height: 100%
+            background: #fcfcfc
+            overflow: hidden
+            border-radius: 8px
+            padding-bottom: 10px
+            .items
+                width: 100%
+                height: 100%
+                flex-direction: column
+                .item_content
+                    width: 100%
+                    height: 100%
+                    // position: relative
+                    flex-direction: column
+                    overflow-y: scroll
+                    flex-grow: 0
+                    // scrollbar-gutter: always
+                    
+                    .name
+                        flex: 3 0 250px
+                        justify-content: flex-start
+                    .checkbox
+                        flex: 0 0 30px
+                        justify-content: flex-start
+                        align-items: center
+                    .col
+                        flex: 1 0 100px
+                        justify-content: flex-end
+                        align-items: flex-start
+                        &:last-child
+                            padding-right: 10px
+                        // padding: 0 10px
+                
+                .item_title
+                    width: 100%
+                    padding: 10px 20px
+                    background: #F6F6F6
+                    box-sizing: border-box
+                    // flex-shrink: 0
+                    span
+                        // width: 100%
+                        display: flex
+                        white-space: nowrap
+                        flex: 1 0 100px
+                        justify-content: flex-end
+                        // padding: 0 10px
+                        &:last-child
+                            padding-right: 20px
+                        &:nth-child(1)
+                            flex: 0 0 30px
+                            justify-content: flex-start
+                        &:nth-child(2)
+                            // width: 100%
+                            justify-content: flex-start
+                            flex: 3 0 250px
+                            // min-width: 240px
+
+                            
+                .item
+                    width: 100%
+                    padding: 20px
+                    &:nth-child(odd)
+                        background: #F8F9FA
+                        
+                    img
+                        width: 65px
+                        height: 65px
+                        // background: #000
+                    .detail
+                        flex-direction: column
+                        margin-left: 10px
+                        // width: 240px
+                        span
+                            display: -webkit-box
+                            -webkit-line-clamp: 1
+                            -webkit-box-orient: vertical
+                            overflow: hidden
     .sidebar
         width: 250px
         height: 100%
         background: #FFF
         align-items: center
-        padding: 50px 25px
+        padding: 50px 0
         flex-direction: column
+        box-sizing: border-box
         ul
+            position: relative
             list-style: none
             width: 100%
             padding: 0
+            box-sizing: border-box
+            .bullet
+                position: absolute
+                width: 4px
+                height: 34px
+                background: #51459E
+                top: 8px
+                left: 0
+                border-radius: 0 5px 5px 0
             li
                 display: flex
+                padding: 0 25px
                 align-items: center
                 width: 100%
                 justify-content: center
@@ -22,13 +138,14 @@
                 color: #555
                 // background-image: linear-gradient(to right, #329AFA , #61B3FF)
                 // color: #FFF
-                padding: 10px 12px
+                padding: 10px 25px
                 box-sizing: border-box
                 border-radius: 8px
                 i
                     margin-right: 10px
                     font-size: 0.9em
                 span
+                    font-size: 1.2em
                     // width: 100%
                     
         .profile
